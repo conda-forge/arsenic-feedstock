@@ -1,5 +1,5 @@
 {% set name = "arsenic" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/openforcefield/openff-{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: f7bcada177e3dbe1486ffa4461184d045b48eb266379bc2a95b026fbe26363e1
+  sha256: 7fe01b249ff0ae0266d51e6f603d9966c3c10dd3dfd1097b180c246bfd19c615
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -39,7 +39,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Consistent presentation of free energy data'
+  summary: Consistent presentation of free energy data
 
 extra:
   recipe-maintainers:
