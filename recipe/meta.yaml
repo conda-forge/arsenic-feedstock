@@ -1,5 +1,5 @@
 {% set name = "cinnabar" %}
-{% set version = "0.2.2" %}
+{% set version = "0.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/OpenFreeEnergy/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: da5e6a99b4177fe43909b0e6ffddd4a2827c1db0dfb10e12e14018d9118f2ab3
+  sha256: 04b9a9bfb892c54dd8132fdeae4f4a0d6dc3f75c957217f12860bca39d837a5d
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -39,7 +39,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Consistent presentation of free energy data'
+  summary: Consistent presentation of free energy data
 
 extra:
   recipe-maintainers:
