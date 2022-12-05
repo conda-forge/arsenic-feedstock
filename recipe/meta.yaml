@@ -10,21 +10,22 @@ source:
   sha256: 04b9a9bfb892c54dd8132fdeae4f4a0d6dc3f75c957217f12860bca39d837a5d
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
     - pip
+    - python
   run:
+    - adjusttext
+    - matplotlib-base
     - networkx
     - numpy
-    - matplotlib-base
-    - seaborn
     - plotly
     - python
     - scikit-learn
+    - seaborn
 
 test:
   imports:
