@@ -1,5 +1,5 @@
-{% set name = "cinnabar" %}
-{% set version = "0.2.3" %}
+{% set name = "arsenic" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,36 +7,37 @@ package:
 
 source:
   url: https://github.com/OpenFreeEnergy/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 04b9a9bfb892c54dd8132fdeae4f4a0d6dc3f75c957217f12860bca39d837a5d
+  sha256: 07e59cf9d8f7f5e4d657937c41c90a41539131908b4df90941c1a46abfb421cd
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
+  noarch: python
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
     - adjusttext
     - matplotlib-base
     - networkx
     - numpy
     - plotly
-    - python
+    - python >=3.6
     - scikit-learn
     - seaborn
 
 test:
   imports:
-    - cinnabar
+    - arsenic
   requires:
     - pip
   commands:
     - pip check
 
 about:
-  home: https://github.com/OpenFreeEnergy/cinnabar
+  home: https://github.com/OpenFreeEnergy/arsenic
   license: MIT
   license_family: MIT
   license_file: LICENSE
@@ -44,11 +45,7 @@ about:
 
 extra:
   recipe-maintainers:
-    - hannahbrucemacdonald
-    - glass-w
     - mikemhenry
-    - ijpulidos
-    - jchodera
     - IAlibay
     - richardjgowers
     - dwhswenson
