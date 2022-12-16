@@ -1,4 +1,4 @@
-{% set name = "aresnic" %}
+{% set name = "arsenic" %}
 {% set version = "0.2.2" %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/OpenFreeEnergy/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 04b9a9bfb892c54dd8132fdeae4f4a0d6dc3f75c957217f12860bca39d837a5d
+  sha256: 07e59cf9d8f7f5e4d657937c41c90a41539131908b4df90941c1a46abfb421cd
 
 build:
   number: 0
@@ -30,14 +30,14 @@ requirements:
 
 test:
   imports:
-    - aresnic
+    - arsenic
   requires:
     - pip
   commands:
     - pip check
 
 about:
-  home: https://github.com/OpenFreeEnergy/aresnic
+  home: https://github.com/OpenFreeEnergy/arsenic
   license: MIT
   license_family: MIT
   license_file: LICENSE
