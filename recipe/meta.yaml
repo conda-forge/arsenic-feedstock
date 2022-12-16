@@ -1,5 +1,5 @@
-{% set name = "cinnabar" %}
-{% set version = "0.2.3" %}
+{% set name = "aresnic" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -10,8 +10,9 @@ source:
   sha256: 04b9a9bfb892c54dd8132fdeae4f4a0d6dc3f75c957217f12860bca39d837a5d
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
+  noarch: python
 
 requirements:
   host:
@@ -29,14 +30,14 @@ requirements:
 
 test:
   imports:
-    - cinnabar
+    - aresnic
   requires:
     - pip
   commands:
     - pip check
 
 about:
-  home: https://github.com/OpenFreeEnergy/cinnabar
+  home: https://github.com/OpenFreeEnergy/aresnic
   license: MIT
   license_family: MIT
   license_file: LICENSE
@@ -44,11 +45,7 @@ about:
 
 extra:
   recipe-maintainers:
-    - hannahbrucemacdonald
-    - glass-w
     - mikemhenry
-    - ijpulidos
-    - jchodera
     - IAlibay
     - richardjgowers
     - dwhswenson
