@@ -10,21 +10,21 @@ source:
   sha256: 07e59cf9d8f7f5e4d657937c41c90a41539131908b4df90941c1a46abfb421cd
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - adjusttext
     - matplotlib-base
     - networkx
     - numpy
     - plotly
-    - python >=3.6
+    - python >={{ python_min }}
     - scikit-learn
     - seaborn
 
@@ -33,6 +33,7 @@ test:
     - arsenic
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
